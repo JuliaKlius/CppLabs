@@ -10,8 +10,7 @@ double CalculateBisector(double A[2], double B[2], double C[2]);
 
 double CalculateFormule(double x)
 {
-    double result = cos(2 * fabs(x)) + ((1.1 * x + 2) * ctg(3 * x)) / (1.7 * (2.3 * x - 5));
-    return result;
+   return cos(2 * fabs(x)) + ((1.1 * x + 2) * ctg(3 * x)) / (1.7 * (2.3 * x - 5));
 }
 
 double ctg(double x)
@@ -19,6 +18,7 @@ double ctg(double x)
     return cos(x) / sin(x);
 }
 
+//друге завдання
 double DistanceBetweenPoints(double point1[2], double point2[2])
 {
     return sqrt(pow((point2[0] - point1[0]), 2) + pow((point2[1] - point1[1]), 2));

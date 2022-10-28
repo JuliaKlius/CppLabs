@@ -1,20 +1,95 @@
-// Lab2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+
+bool IsPointInFigure(float x, float y)
+{
+	if (x <= 1 and x >= 0 and y <= 0 and y >= -1) return false;
+	if (x <= 1 and x >= -1 and y <= 1 and y >= -1)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+// друге завдання
+int FunctionValue(int x, int y)
+{
+	switch (x)
+	{
+	case 0:
+		switch (y)
+		{
+		case 0:
+			return 2;
+			break;
+		case 1:
+			return 1;
+			break;
+		case 2:
+			return 2;
+			break;
+		default:
+			return -1;
+		}
+		break;
+	case 1:
+		switch (y)
+		{
+		case 0:
+			return 1;
+			break;
+		case 1:
+			return 0;
+			break;
+		case 2:
+			return 1;
+			break;
+		default:
+			return -1;
+		}
+		break;
+	case 2:
+		switch (y)
+		{
+		case 0:
+			return 1;
+			break;
+		case 1:
+			return 0;
+			break;
+		case 2:
+			return 2;
+			break;
+		default:
+			return -1;
+		}
+		break;
+	default:
+		return -1;
+	}
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
-}
+	// задача 1
+	float x, y;
+tryAgain:
+	std::cout << "Enter the coordinates of the point\n"; 
+	std::cin >> x >> y;
+	bool result = IsPointInFigure(x, y);
+	std::cout << "result of funtion  true or false\n";
+	std::cout << result;
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+	bool ToContinue;
+ 
+	std::cout << "\nEnter 1 to try again or 0 to continue\n";
+	std::cin >> ToContinue; 
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	if (ToContinue)
+		goto tryAgain;
+
+	// задача 2
+
+	}
